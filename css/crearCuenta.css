@@ -1,0 +1,18 @@
+#crearCuenta h1 {
+    text-align: center;
+    padding: 40px 20px 40px 20px;
+}
+
+#divSeccionCrearCuenta {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+#divSeccionCrearCuenta form {
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid rgb(192, 192, 192);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}

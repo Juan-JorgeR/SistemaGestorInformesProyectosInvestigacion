@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.ModuloVisual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.formulario {
+    box-sizing: border-box;
+}
+
+.formulario ul li {
+    list-style: none;
+}
+
+.formulario input {
+    font-size: 16px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.navegadorHorizontal {
+    
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="css/thema.css">
+        <link rel="stylesheet" href="css/iniciarSesion.css">
+        <link rel="stylesheet" href="css/crearCuenta.css">
+        <link rel="stylesheet" href="css/investigador.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <main>
+            <section id="crearCuenta" class="ModuloVisual">
+                <h1>Crear Cuenta para investigador</h1>
+                <div id="divSeccionCrearCuenta">
+                    <form method="post" action="#" class="formulario">
+                        <ul>
+                            <li><input id="nombre" type="text" placeholder="Nombre(s)"></li>
+                            <li><input id="apellido" type="text" placeholder="Apellido(s)"></li>
+                            <li><input id="cedula" type="text" placeholder="Cédula"></li>
+                            <li><input id="telefono" type="text" placeholder="Teléfono"></li>
+                            <li><input id="direccion" type="text" placeholder="Dirección"></li>
+                            <li><input id="password" type="text" placeholder="Contraseña"></li>
+                            <li><input id="confirmacionPasssword" type="text" placeholder="Confirmación contraseña"></li>
+                            <li><input id="crearCuenta" type="submit" value="Crear Cuenta"></li>
+                        </ul>
+                    </form>
+                </div>
+            </section>
+            <section id="login" class="ModuloVisual">
+                <div id="divBotonCrearCuenta">
+                    <button id="botonCrearCuenta">Crear Cuenta</button>
+                </div>
+                <h1>Iniciar Sesión</h1>
+                <div id="divSeccionIniciarSeccion">
+                    <form method="post" action="#" id="formularioIniciarSesion" class="formulario">
+                        <ul>
+                            <li><input id="cuenta" type="text" placeholder="Cuenta"></li>
+                            <li><input id="password" type="password" placeholder="Contraseña"></li>
+                            <li><input id="iniciarSesion" type="submit" value="Iniciar Sesión"></li>
+                        </ul>
+                    </form>
+                </div>
+            </section>
+            <section id="investigador" class="ModuloVisual">
+                <nav id="navInvestigador" class="navegadorHorizontal">
+                    <ul>
+                        <li class="opcionBarraNavegacionInvestigador" id="liOpcionCrearProyecto"><a id="opcionCrearProyecto" href="#">Crear proyecto</a></li>
+                        <li class="opcionBarraNavegacionInvestigador" id="liOpcionSubirArchivo"><a id="opcionSubirArchivo" href="#">Subir archivo</a></li>
+                        <li><button id="botonCerrarSesion">Cerrar Sesion</button></li>
+                    </ul>
+                </nav>
+                <div id="areaTrabajoInvestigador">
+                    <aside id="rutaDirectorios">
+                    
+                    </aside>
+                    <section id="opcionSeleccionada">
+                        <div id="crearProyecto">
+                            <form method="post" action="#" id="formularioCrearProyecto" class="formulario">
+                                <ul>
+                                    <li><input id="nombreProyecto" type="text" placeholder="Nombre del proyecto"></li>
+                                    <li><input id="financiador" type="text" placeholder="Financiador"></li>
+                                    <li><input id="presupuesto" type="text" placeholder="Presupuesto"></li>
+                                    <li><input id="fechaInicio" type="date" placeholder="Fecha inicio"></li>
+                                    <li><input id="fechaFinal" type="date" placeholder="Fecha final"></li>
+                                    <li><input id="botonCrearProyecto" type="submit" value="Crear Proyecto"></li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div id="subirArchivo">
+                            <div>
+                               <ul>
+                                    <li>
+                                        <p>
+                                            Primero selecciona la carpeta donde
+                                            subirá los archivos
+                                            o arbol de directorios
+                                        </p>
+                                    </li>
+                                    <li><input id="seleccionarArchivo" type="file" placeholder="seleccionar archivo"></li>
+                                    <li><button id="botonSubirArchivo">Subir archivo</button></li>
+                               </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script src="js/controladorMain.js"></script>
+</html>

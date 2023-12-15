@@ -1,0 +1,105 @@
+:root {
+    --color-barraNavegacion: rgb(0, 61, 80);
+    --color-blanco: rgb(255, 255, 255);
+    --colorBarraDirectorios: rgb(235, 235, 235);
+}
+
+#navInvestigador {
+    background-color: var(--color-barraNavegacion);
+    color: var(--color-blanco); 
+}
+
+#navInvestigador ul {
+    display: flex;
+    justify-content: center;
+}
+
+#navInvestigador li {
+    list-style: none;
+    padding: 10px 20px 10px 20px;
+}
+
+#navInvestigador a {
+    text-decoration: none;
+    color: var(--color-blanco);
+}
+
+#botonCerrarSesion {
+    padding: 0 10px 0 10px;
+}
+
+#rutaDirectorios {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 75%;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: var(--colorBarraDirectorios);
+}
+
+#crearProyecto {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 25%;
+    width: 75%;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+#subirArchivo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 25%;
+    width: 75%;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+#subirArchivo div ul {
+    text-align: center;
+    list-style: none;
+    margin: 2em;
+}
+
+#subirArchivo div ul li {
+    margin: 2em;
+}
+
+#areaTrabajoInvestigador {
+    position: relative;
+    height: 100%;
+}
+
+#formularioCrearProyecto {
+
+}
+
+#seleccionarArchivo {
+    width: 200px;
+    height: 40px;
+}
+
+#botonSubirArchivo {
+    width: 100px;
+    height: 40px;
+}
