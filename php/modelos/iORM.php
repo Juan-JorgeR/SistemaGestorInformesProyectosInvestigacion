@@ -1,8 +1,8 @@
 <?php
     interface iORM {
         function create();
-        function read();
-        function update();
-        function delete();
+        function read($clausula);
+        function update($clausula);
+        function delete($clausula);
     }
 ?>

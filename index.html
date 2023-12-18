@@ -14,16 +14,16 @@
             <section id="crearCuenta" class="ModuloVisual">
                 <h1>Crear Cuenta para investigador</h1>
                 <div id="divSeccionCrearCuenta">
-                    <form method="post" action="php/controladores/crearCuenta.php" class="formulario">
+                    <form method="post"  class="formulario">
                         <ul>
-                            <li><input name="nombre" id="nombre" type="text" placeholder="Nombre(s)"></li>
-                            <li><input name="apellido" id="apellido" type="text" placeholder="Apellido(s)"></li>
-                            <li><input name="cedula" id="cedula" type="text" placeholder="Cédula"></li>
-                            <li><input name="telefono" id="telefono" type="text" placeholder="Teléfono"></li>
-                            <li><input name="direccion" id="direccion" type="text" placeholder="Dirección"></li>
-                            <li><input name="correoElectronico" id="correoElectronico" type="text" placeholder="correo electronico"></li>
-                            <li><input name="password" id="password" type="password" placeholder="Contraseña"></li>
-                            <li><input id="crearCuenta" type="submit" value="Crear Cuenta"></li>
+                            <li><input id="nombreCrearCuenta" type="text" placeholder="Nombre(s)"></li>
+                            <li><input id="apellidoCrearCuenta" type="text" placeholder="Apellido(s)"></li>
+                            <li><input id="cedulaCrearCuenta" type="text" placeholder="Cédula"></li>
+                            <li><input id="telefonoCrearCuenta" type="text" placeholder="Teléfono"></li>
+                            <li><input id="direccionCrearCuenta" type="text" placeholder="Dirección"></li>
+                            <li><input id="correoElectronicoCrearCuenta" type="text" placeholder="correo electronico"></li>
+                            <li><input id="passwordCrearCuenta" type="password" placeholder="Contraseña"></li>
+                            <li><input id="crearCuentaSubmit" type="submit" value="Crear Cuenta"></li>
                         </ul>
                     </form>
                 </div>
@@ -34,11 +34,11 @@
                 </div>
                 <h1>Iniciar Sesión</h1>
                 <div id="divSeccionIniciarSeccion">
-                    <form method="post" action="php/controladores/iniciarSesion.php" id="formularioIniciarSesion" class="formulario">
+                    <form method="post"  id="formularioIniciarSesion" class="formulario">
                         <ul>
-                            <li><input name="cuenta" id="cuenta" type="text" placeholder="Cuenta"></li>
-                            <li><input name="password" id="password" type="password" placeholder="Contraseña"></li>
-                            <li><input id="iniciarSesion" type="submit" value="Iniciar Sesión"></li>
+                            <li><input id="cuentaIniciarSesion" type="text" placeholder="Cuenta"></li>
+                            <li><input id="passwordIniciarSesion" type="password" placeholder="Contraseña"></li>
+                            <li><input id="iniciarSesionSubmit" type="submit" value="Iniciar Sesión"></li>
                         </ul>
                     </form>
                 </div>
@@ -88,5 +88,7 @@
             </section>
         </main>
     </body>
-    <script src="js/controladorMain.js"></script>
+    <!--<script src="js/controladorMain.js"></script>-->
+    <script src="js/vistas/crearCuenta.js" type="module"></script>
+    <script src="js/vistas/iniciarSesion.js" type="module"></script>
 </html>

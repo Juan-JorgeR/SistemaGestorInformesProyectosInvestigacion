@@ -30,13 +30,13 @@
         public function create() {
 
         }
-        public function read() {
+        public function read($clausula) {
 
         }
-        public function update() {
+        public function update($clausula) {
 
         }
-        public function delete() {
+        public function delete($clausula) {
                 
         }
     }

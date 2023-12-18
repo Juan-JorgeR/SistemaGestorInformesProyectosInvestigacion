@@ -4,7 +4,6 @@ let seccionLogin = document.querySelector("#login");
 let seccionCrearCuenta = document.querySelector("#crearCuenta");
 let seccionInvestigador = document.querySelector("#investigador");
 
-let formularioIniciarSesion = document.querySelector("#login form");
 let botonCrearCuenta = document.querySelector("#botonCrearCuenta");
 
 let divCrearProyecto = document.querySelector("#crearProyecto");
@@ -16,28 +15,24 @@ let opcionCrearProyecto = document.querySelector("#opcionCrearProyecto");
 let opcionSubirArchivo = document.querySelector("#opcionSubirArchivo");
 let botonCerrarSesion = document.querySelector("#botonCerrarSesion");
 
-let formularioCrearProyecto = document.querySelector("#formularioCrearProyecto");
 let opcionSeleccionarArchivo = document.querySelector("#seleccionarArchivo");
 let botonSubirArchivo = document.querySelector("#botonSubirArchivo");
 
-main();
-
-function desplegarLogin() {
+export function desplegarLogin() {
     ocultarCrearCuenta();
     ocultarInvestigador();
 
     seccionLogin.style.visibility = "visible";
 }
 
-function desplegarCrearCuenta(e) {
+export function desplegarCrearCuenta(e) {
     ocultarLogin();
     ocultarInvestigador();
 
     seccionCrearCuenta.style.visibility = "visible";
 }
 
-function desplegarInvestigador(e) {
-    e.preventDefault();
+export function desplegarInvestigador() {
     ocultarLogin();
     ocultarCrearCuenta();
 
@@ -45,7 +40,7 @@ function desplegarInvestigador(e) {
     seccionInvestigador.style.visibility = "visible";
 }
 
-function desplegarCrearProyecto(e) {
+export function desplegarCrearProyecto(e) {
     liOpcionSubirArchivo.style.backgroundColor = "rgb(0, 61, 80)";
     liOpcionCrearProyecto.style.backgroundColor = "rgb(158, 15, 15)";
     ocultarSubirArchivo();
@@ -53,7 +48,7 @@ function desplegarCrearProyecto(e) {
     divCrearProyecto.style.visibility = "visible";
 }
 
-function desplegarSubirArchivo(e) {
+export function desplegarSubirArchivo(e) {
     liOpcionSubirArchivo.style.backgroundColor = "rgb(158, 15, 15)";
     liOpcionCrearProyecto.style.backgroundColor = "rgb(0, 61, 80)";
     ocultarCrearProyecto();
@@ -61,59 +56,57 @@ function desplegarSubirArchivo(e) {
     divSubirArchivo.style.visibility = "visible";
 }
 
-function ocultarLogin() {
+export function ocultarLogin() {
     seccionLogin.style.visibility = "hidden";
 } 
 
-function ocultarCrearCuenta() {
+export function ocultarCrearCuenta() {
     seccionCrearCuenta.style.visibility = "hidden";
 }
 
-function ocultarInvestigador() {
+export function ocultarInvestigador() {
     seccionInvestigador.style.visibility = "hidden";
 }
 
-function ocultarCrearProyecto() {
+export function ocultarCrearProyecto() {
     divCrearProyecto.style.visibility = "hidden";
 }
 
-function ocultarSubirArchivo() {
+export function ocultarSubirArchivo() {
     divSubirArchivo.style.visibility = "hidden";
 }
 
-function crearProyecto(e) {
+export function crearProyecto(e) {
     e.preventDefault();
 }
 
-function seleccionarArchivo(e) {
+export function seleccionarArchivo(e) {
 
 }
 
-function subirArchivo(e) {
+export function subirArchivo(e) {
 
 }
 
-function cerrarSesion() {
+export function cerrarSesion() {
     ocultarCrearProyecto();
     ocultarSubirArchivo();
 
     desplegarLogin();
 }
 
-function inicializarEventosInterfaz() {
-    formularioIniciarSesion.addEventListener("submit",desplegarInvestigador);
+export function inicializarEventosInterfaz() {
     botonCrearCuenta.addEventListener("click",desplegarCrearCuenta);
 
     opcionCrearProyecto.addEventListener("click",desplegarCrearProyecto);
     opcionSubirArchivo.addEventListener("click",desplegarSubirArchivo);
 
-    formularioCrearProyecto.addEventListener("submit",crearProyecto);
     opcionSeleccionarArchivo.addEventListener("click",seleccionarArchivo);
     botonSubirArchivo.addEventListener("click",subirArchivo);
     botonCerrarSesion.addEventListener("click",cerrarSesion);
 }
 
-function main() {
+export function main() {
     inicializarEventosInterfaz();
     desplegarLogin();
 }

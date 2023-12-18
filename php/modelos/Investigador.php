@@ -40,7 +40,10 @@
             $row = $result->fetch_array(MYSQLI_ASSOC);
             $this->id = $row['id'] + 1;
 
-            $this->cuenta = trim($this->getNombre().$this->getApellido().$this->id."@investigador");
+            $this->cuenta = str_replace(' ','',$this->getNombre().$this->getApellido().$this->id."@investigador");
+        }
+        public function setCuenta2($cuenta) {
+            $this->cuenta = $cuenta;
         }
         public function setPassword($password) {
             $this->password = $password;
@@ -95,9 +98,10 @@
                 . "\"" . $this->password . "\")";
 
             $result = $GLOBALS['mysqli']->query($query);
+            echo json_encode($this->getCuenta());
         }
-        public function read() {
-            $query = "select * from Investigadores";
+        public function read($clausula) {
+            $query = "select * from Investigadores where " . $clausula;
             $result = $GLOBALS['mysqli']->query($query);
             $investigadores = array();
             $i = 0;
@@ -122,16 +126,17 @@
                 $investigador->setCedula($cedula);
                 $investigador->setTelefono($telefono);
                 $investigador->setDireccion($direccion);
+                $investigador->setCuenta2($cuenta);
                 $investigador->setPassword($password);
 
-                $investigadores[$i++] = $investigadores;
+                $investigadores[$i++] = $investigador;
             }
-            return json_encode($investigadores);
+            return $investigadores;
         }
-        public function update() {
+        public function update($clausula) {
 
         }
-        public function delete() {
+        public function delete($clausula) {
 
         }
     }
